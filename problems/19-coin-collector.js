@@ -25,7 +25,17 @@ Example 3:
 
 ***********************************************************************/
 
-// your code here
+let coinCollector = numCoins => {
+ let coins = [];
+ let collect = (coin) => {
+  coins.push(coin);
+ if(coins.length >= numCoins) {
+  return coins;
+ }
+  return collect;
+ }
+ return collect;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
