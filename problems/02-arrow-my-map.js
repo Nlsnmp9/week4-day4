@@ -17,13 +17,12 @@ let result2 = arrowMyMap(['run', 'Forrest'], yell);
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
-
-const arrowMyMap = (arr, cb) => {
-  let newArr = [];
-  for(let i=0;i<arr.length;i++){
-    newArr.push(cb(arr[i]));
-  }
-   return newArr;
+let arrowMyMap = (arr, cb) =>{
+  const res = [];
+  arr.forEach((el) => {
+     res.push(cb(el));
+  });
+   return res;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
